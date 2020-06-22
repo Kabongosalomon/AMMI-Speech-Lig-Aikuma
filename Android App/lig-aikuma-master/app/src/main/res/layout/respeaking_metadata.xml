@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:orientation="vertical"
+		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin">
+
+		<!-- Back button -->
+		<GridLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left">
+
+			<Button
+				android:id="@+id/btn_goBack"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginBottom="20dp"
+				android:layout_marginTop="20dp"
+				android:drawableLeft="@drawable/ic_undo_black_24dp"
+				android:onClick="onBackPressed"
+				android:text="@string/goBack"
+				android:textColor="#D32F2F"/>
+		</GridLayout>
+
+		<TableLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/respeak_metadata_title"
+				style="@style/MainTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dp"
+				android:text="@string/respeaking_metadata"/>
+
+			<View
+				android:id="@+id/separator"
+				android:layout_width="match_parent"
+				android:layout_height="0.2dp"
+				android:layout_marginBottom="30dp"
+				android:background="@android:color/darker_gray"
+				android:visibility="visible"/>
+
+		</TableLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/remind_record_metadata"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="@dimen/activity_horizontal_margin"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/tv_secondLanguage"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/recording_metadata"
+					android:textSize="15sp"
+					android:textStyle="bold"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/metadata_layout_vert_margin"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/textView3"
+						style="@style/respeak_remindInfoRecord_TextviewMetadata1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/spoken_languages"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/tv_spokenLanguages"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="@string/respeak_meta_record_lang"
+							android:textColor="#6FA9C8"/>
+
+						<TextView
+							android:id="@+id/record_edit_recording_lang"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="TextView"
+							android:textColor="#000000"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/textView4"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="@string/metadata_mother_tongue"/>
+
+						<TextView
+							android:id="@+id/record_edit_mother_tongue"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="TextView"
+							android:textColor="#000000"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/textView6"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="@string/respeak_meta_extra_lang"/>
+
+						<TextView
+							android:id="@+id/record_edit_extra_lang"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="TextView"
+							android:textColor="#000000"/>
+					</LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/metadata_layout_vert_margin"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/textView5"
+						style="@style/respeak_remindInfoRecord_TextviewMetadata1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/respeak_meta_spkr_info"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/textView7"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="@string/speaker_name"
+							android:textColor="#6FA9C8"/>
+
+						<TextView
+							android:id="@+id/record_edit_spkr_name"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="TextView"
+							android:textColor="#000000"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/textView8"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="@string/age"/>
+
+						<TextView
+							android:id="@+id/record_edit_spkr_age"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="TextView"
+							android:textColor="#000000"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/textView9"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="@string/gender"/>
+						<TextView
+							android:id="@+id/record_edit_spkr_gender"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="TextView"
+							android:textColor="#000000"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent">
+
+						<TextView
+							android:id="@+id/textView10"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="200dp"
+							android:layout_height="wrap_content"
+							android:text="@string/region_origin"
+							android:textColor="#A7C8D9"/>
+
+						<TextView
+							android:id="@+id/record_edit_spkr_region_orig"
+							style="@style/respeak_remindInfoRecord_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="TextView"
+							android:textColor="#000000"/>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/respeak_metadata"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="@dimen/activity_horizontal_margin"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/textView11"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/respeaking_metadata"
+					android:textSize="30sp"
+					android:textStyle="bold"/>
+
+				<Button
+					android:id="@+id/btn_importProfil"
+					android:layout_width="250dp"
+					android:layout_height="match_parent"
+					android:layout_marginBottom="20dp"
+					android:layout_marginTop="20dp"
+					android:layout_weight="0.09"
+					android:drawableLeft="@drawable/ic_profil"
+					android:onClick="onImportPressed"
+					android:text="@string/import_speaker_profile"
+					android:textColor="#D32F2F"/>
+
+				<LinearLayout
+					android:id="@+id/respeak_layout_spokenLanguages"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/metadata_layout_vert_margin"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/textView12"
+						style="@style/respeak_TextviewMetadata1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/spoken_languages"/>
+
+					<LinearLayout
+						android:id="@+id/respeak_layout_languages"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<LinearLayout
+							android:id="@+id/respeak_layout_langRespeaking"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:id="@+id/respeak_tv_langRespeaking"
+								style="@style/respeak_TextviewMetadata3"
+								android:layout_width="100dp"
+								android:layout_height="wrap_content"
+								android:layout_alignParentLeft="true"
+								android:lines="2"
+								android:text="@string/respeaking_lang"
+								android:textSize="14sp"/>
+
+							<TextView
+								android:id="@+id/respeak_tv_selectedlangRespeaking"
+								style="@style/respeak_TextViewSelectedLang"/>
+
+							<Button
+								android:id="@+id/respeak_btn_langRespeaking"
+								style="@style/ButtonChooseLanguage"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:onClick="onPickLanguage"
+								android:text="@string/select_from_list"/>
+						</LinearLayout>
+
+						<LinearLayout
+							android:id="@+id/respeak_layout_mothertongue"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:id="@+id/respeak_tv_mothertongue"
+								style="@style/respeak_TextviewMetadata2"
+								android:layout_width="100dp"
+								android:layout_height="wrap_content"
+								android:text="@string/metadata_mother_tongue"/>
+
+							<TextView
+								android:id="@+id/respeak_tv_selectedmotherTongue"
+								style="@style/respeak_TextViewSelectedLang"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"/>
+
+							<Button
+								android:id="@+id/respeak_btn_mothertongue"
+								style="@style/ButtonChooseLanguage"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:onClick="onPickLanguage"
+								android:text="@string/select_from_list"/>
+						</LinearLayout>
+
+						<LinearLayout
+							android:id="@+id/respeak_layout_secondlanguage"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:id="@+id/respeak_tv_secondlanguage"
+								style="@style/respeak_TextviewMetadata2"
+								android:layout_width="100dp"
+								android:layout_height="wrap_content"
+								android:text="@string/second_language"/>
+
+							<TextView
+								android:id="@+id/respeak_tv_selectedsecondlanguage"
+								style="@style/respeak_TextViewSelectedLang"/>
+
+							<Button
+								android:id="@+id/respeak_btn_secondlanguage"
+								style="@style/ButtonChooseLanguage"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:onClick="onPickLanguage"
+								android:text="@string/select_from_list"/>
+						</LinearLayout>
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/respeak_layout_btnMoreLessLanguage"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginBottom="45dp"
+						android:layout_marginTop="15dp">
+
+						<Button
+							android:id="@+id/respeak_btn_addMoreLang"
+							style="ButtonMoreLanguages"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_horizontal"
+							android:onClick="onAddMoreLanguagesField"
+							android:text="@string/more_languages"
+							android:textColor="#388E3C"
+							android:textSize="15sp"
+							android:textStyle="bold"/>
+
+						<Button
+							android:id="@+id/respeak_btn_addLessLang"
+							style="ButtonLessLanguage"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_horizontal"
+							android:onClick="onDelLanguagesField"
+							android:text="@string/less_languages"
+							android:textColor="#B71C1C"
+							android:textSize="15sp"/>
+					</LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/layout_respeak_speakerInfo"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/textView16"
+						style="@style/respeak_TextviewMetadata1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/speaker_info"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/textView17"
+							style="@style/respeak_TextviewMetadata2"
+							android:layout_width="100dp"
+							android:layout_height="wrap_content"
+							android:text="@string/speaker_name"
+							android:textColor="#6FA9C8"
+							android:textStyle="bold"/>
+
+						<EditText
+							android:id="@+id/respeak_edit_spkr_name"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:ems="10"
+							android:inputType="textPersonName"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/TextView01"
+							style="@style/respeak_TextviewMetadata2"
+							android:layout_width="100dp"
+							android:layout_height="wrap_content"
+							android:text="@string/region_origin"/>
+
+						<EditText
+							android:id="@+id/respeak_edit_spkr_region"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:ems="10"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/TextView02"
+							style="@style/respeak_TextviewMetadata2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/age"/>
+
+						<EditText
+							android:id="@+id/respeak_edit_spkr_age"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:ems="10"
+							android:inputType="number"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:paddingTop="10dp">
+
+						<TextView
+							android:id="@+id/textView18"
+							style="@style/respeak_TextviewMetadata2"
+							android:layout_width="100dp"
+							android:layout_height="wrap_content"
+							android:text="@string/gender"/>
+
+						<RadioGroup
+							android:id="@+id/respeak_edit_gender"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="horizontal">
+
+							<RadioButton
+								android:id="@+id/radio_gender_male"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/male"
+								android:textSize="11sp"/>
+
+							<RadioButton
+								android:id="@+id/radio_gender_female"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="@string/female"
+								android:textSize="11sp"/>
+
+							<RadioButton
+								android:id="@+id/radio_gender_unspecified"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:checked="true"
+								android:text="@string/unspecified"
+								android:textSize="11sp"/>
+						</RadioGroup>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/layout_note"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_margin="@dimen/activity_horizontal_margin"
+				android:orientation="vertical"
+				android:weightSum="1">
+
+				<TextView
+					android:id="@+id/textView13"
+					style="@style/TextviewMetadata1"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="20dp"
+					android:paddingTop="10dp"
+					android:text="@string/note"/>
+
+				<EditText
+					android:id="@+id/meta_edit_note_respeak"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="3.78"
+					android:ems="10"
+					android:inputType="textMultiLine"/>
+			</LinearLayout>
+
+			<Button
+				android:id="@+id/button5"
+				style="?android:attr/buttonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_marginTop="20dp"
+				android:onClick="onOkButtonClick"
+				android:text="Ok"
+				android:textColor="#388E3C"
+				android:textSize="18sp"
+				android:textStyle="bold"/>
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

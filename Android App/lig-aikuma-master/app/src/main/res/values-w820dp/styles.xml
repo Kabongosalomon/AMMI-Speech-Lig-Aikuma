@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="MainTitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#4B7A98</item>
+        <item name="android:textSize">63sp</item>
+        <item name="android:gravity">center</item> 
+    </style>
+
+    <style name="SecondTitle">
+        <item name="android:textSize">25sp</item>
+        <!--  <item name="android:textColor">#E53935</item> -->
+        <item name="android:textColor">#A7C8D9</item>
+        <!--  <item name="android:textAlignment">center</item> -->
+    </style>
+   
+    <style name="TextButton">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">33sp</item>
+        <item name="android:textColor">#6FA9C8</item>
+        <!--  <item name="android:textAlignment">center</item> -->
+    </style>
+        
+    <style name="TextviewMetadata1">
+        <item name="android:textSize">40sp</item>
+      	<item name="android:textColor">#E53935</item>
+        <!--  <item name="android:textAlignment">center</item> -->
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    
+    <style name="TextviewMetadata2">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">#A7C8D9</item>
+        <item name="android:layout_width">350dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="respeak_TextviewMetadata2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#A7C8D9</item>
+        <item name="android:textStyle">bold</item>
+       <!-- <item name="android:layout_width">100dp</item> -->
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+       
+</resources>

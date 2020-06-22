@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+	>
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|fill_horizontal"
+         >
+
+	        <LinearLayout 
+	       		android:layout_width="match_parent"
+	       		android:layout_height="wrap_content"
+	        	android:orientation="horizontal" 
+	        	android:layout_weight="0.5">
+				<TextView
+					android:id="@+id/respeak_current_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="10sp"
+					android:text="0s"
+					android:textSize="18sp"/>
+
+				<TextView
+					android:id="@+id/respeak_total_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="/0s"
+					android:textSize="18sp"/>
+	
+	  		</LinearLayout>   
+	  		
+	        
+	    	<View
+	            android:id="@+id/view1"
+	         	android:layout_width="0.2dp"
+	            android:layout_height="40dp"
+		    	android:visibility="visible"
+		    	android:background="@android:color/darker_gray"
+		    	android:layout_marginLeft="10dp"
+		    	android:layout_marginRight="10dp" />
+	    	
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	       		android:layout_height="match_parent"
+	        	android:orientation="horizontal" 
+	        	android:layout_weight="0.5">
+	
+		
+		        <TextView
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/respeak_previous_segment" />
+		
+		        <FrameLayout
+		            android:id="@+id/respeak_latest_segment_player"
+		            android:layout_width="fill_parent"
+		            android:layout_height="match_parent">
+		        </FrameLayout>
+			</LinearLayout>
+			
+        </LinearLayout>
+
+        <!-- 
+        <Button
+            android:id="@+id/respeak_delete_segment"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_clear_black_24dp"
+            android:gravity="right"
+            android:onClick="onClickDeleteSegment" />
+        -->
+
+
+	<view class="org.getalp.ligaikuma.lig_aikuma.ui.InterleavedSeekBar"
+		  style="@android:style/Widget.ProgressBar.Horizontal"
+		  android:id="@+id/InterleavedSeekBar"
+		  android:layout_width="match_parent"
+		  android:layout_height="32dp"
+		  android:maxHeight="3dp"
+	/>
+
+	<FrameLayout
+		android:id="@+id/waveform_view_container"
+		android:layout_width="match_parent"
+		android:layout_height="149dp">
+
+	</FrameLayout>
+
+	<LinearLayout
+	    android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<ImageButton
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="0.5"
+			android:id="@+id/undoButton"
+			android:src="@drawable/undo2"
+			/>
+   		
+		<ImageButton
+			android:id="@+id/saveButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="centerInside"
+			android:layout_weight="0.5"
+			android:src="@drawable/ok_48"
+			android:onClick="onSaveRespeakingButton"
+		/>
+		
+
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.25">
+		<ImageButton
+			android:id="@+id/PlayButton"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.5"
+			android:scaleType="centerInside"
+			android:src="@drawable/play_48"
+			style="@style/ImageButtonGreenTheme"
+		/>
+
+
+		<ImageButton
+			android:id="@+id/RespeakButton"
+			style="@style/ImageButtonRedTheme"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="0.5"
+			android:scaleType="centerInside"
+			android:src="@drawable/record_48"
+			/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/textView19"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text=""
+			android:layout_weight="0.5"/>
+
+		<CheckBox
+			android:id="@+id/check_no_speak"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5"
+			android:text="@string/no_speech_segment"
+			android:textSize="48sp"/>
+	</LinearLayout>
+</LinearLayout>

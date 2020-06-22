@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+		android:keepScreenOn="true" >
+
+<!-- Back button -->
+    <GridLayout
+       	android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_gravity="left">
+		<Button
+			android:id="@+id/btn_goBack"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:drawableLeft="@drawable/ic_undo_black_24dp"
+			android:onClick="onBackPressed"
+			android:text="@string/goBack"
+			android:textColor="#D32F2F"
+			android:layout_marginBottom="20dp" 
+			android:layout_marginTop="20dp" />
+	</GridLayout>    
+ 
+    <TableLayout
+		    android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"> 
+	    
+		    <TextView
+		        style="@style/MainTitle" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/new_recording"
+	            android:layout_marginBottom="20dp"/>
+		    <View
+		       android:layout_width="match_parent"
+		       android:layout_height="0.2dp"
+		       android:id="@+id/separator"
+		       android:visibility="visible"
+		       android:background="@android:color/darker_gray"
+		       android:layout_marginBottom="50dp"/> 
+		    
+	</TableLayout>
+
+	<TextView
+		android:id="@+id/timeDisplay"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:textSize="25sp"
+	/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="2"
+	>
+		<ImageButton
+			android:id="@+id/pauseButton"
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent"
+			android:scaleType="centerInside"
+			android:src="@drawable/pause_48"
+			android:onClick="onPauseButton"
+			android:layout_alignParentBottom="true"
+			android:visibility="gone"
+		/>
+		<ImageButton
+			android:id="@+id/recordButton"
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent"
+			android:scaleType="centerInside"
+			android:src="@drawable/record_48"
+			android:onClick="onRecordButton"
+		/>
+	</LinearLayout>
+	
+	<!--  Video record button, hide for now
+	<ImageButton
+			android:id="@+id/videoRecordButton"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="2"
+			android:scaleType="centerInside"
+			android:src="@drawable/movie_48"
+			android:onClick="onVideoRecord"
+		/>
+	-->
+	
+	<ImageButton
+		android:id="@+id/stopButton"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="centerInside"
+		android:src="@drawable/ok_disabled_48"
+		android:onClick="onStopButton"
+	/>
+</LinearLayout>

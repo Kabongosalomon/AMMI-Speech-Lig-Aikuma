@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+    
+	<TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin" >
+	    
+	    <!-- Back button -->
+	    <GridLayout
+	       	android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_gravity="left">
+			<Button
+				android:id="@+id/btn_goBack"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:drawableLeft="@drawable/ic_undo_black_24dp"
+				android:onClick="onBackPressed"
+				android:text="@string/goBack"
+				android:textColor="#D32F2F"
+				android:layout_marginBottom="20dp" 
+				android:layout_marginTop="20dp" />
+		</GridLayout>
+	        
+	        <TextView
+	            android:id="@+id/maintextViewElicit1"
+	            style="@style/MainTitle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/elicitationMode" />
+	
+	        <View
+		       android:layout_width="match_parent"
+		       android:layout_height="0.2dp"
+		       android:id="@+id/separator"
+		       android:visibility="visible"
+		       android:background="@android:color/darker_gray"
+		       android:layout_marginBottom="30dp"/>  
+	
+		    <TextView
+		        android:id="@+id/textViewElicit2"
+		        style="@style/SecondTitle"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/selectanElicitMode" />
+	
+	    
+	    
+	    <TableLayout
+	        android:layout_gravity="center_vertical|center_horizontal"   
+	        android:layout_marginTop="40dp" >
+	        
+		        <!-- By Text Button -->
+		    	<Button
+		    	    android:id="@+id/button_byText"
+		    	    style="@style/TextButton"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:drawableTop="@drawable/ic_dvr_black_24dp"
+		    	    android:onClick="onImportClick"
+		    	    android:text="@string/elicitText" />
+			    <!-- By Image Button -->
+			    <Button
+			        android:id="@+id/button_byImage"
+			        style="@style/TextButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:drawableTop="@drawable/ic_image_black_24dp"
+			        android:onClick="onImportClick"
+			        android:text="@string/elicitImage" />
+			    <!-- By Video Button -->
+			    <Button
+			        android:id="@+id/button_byVideo"
+			        style="@style/TextButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1.09"
+			        android:drawableTop="@drawable/ic_videocam_black_24dp"
+			        android:onClick="onImportClick"
+			        android:text="@string/elicitVideo" />
+		</TableLayout>
+	
+	</TableLayout>
+	
+</ScrollView>

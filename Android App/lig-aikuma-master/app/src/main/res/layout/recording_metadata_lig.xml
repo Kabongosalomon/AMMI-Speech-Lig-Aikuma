@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:orientation="vertical"
+		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:weightSum="1">
+	    
+		<!-- Back button -->
+		<GridLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left">
+
+			<Button
+				android:id="@+id/btn_goBack"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_marginBottom="20dp"
+				android:layout_marginTop="20dp"
+				android:drawableLeft="@drawable/ic_undo_black_24dp"
+				android:onClick="onBackPressed"
+				android:text="@string/goBack"
+				android:textColor="#D32F2F" />
+		</GridLayout>
+
+		<TableLayout
+		    android:id="@+id/title_layout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content" >
+	    
+		    <TextView
+		        style="@style/MainTitle" 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/RecordingMetadataTitle"
+	            android:layout_marginBottom="20dp"/>
+		    <View
+				android:layout_width="match_parent"
+				android:layout_height="0.2dp"
+				android:id="@+id/separator"
+				android:visibility="visible"
+				android:layout_marginBottom="15dp"/>
+		</TableLayout>
+
+		<Button
+			android:id="@+id/btn_importProfil"
+			android:layout_width="250dp"
+			android:layout_height="0dp"
+			android:layout_marginBottom="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_weight="0.09"
+			android:drawableLeft="@drawable/ic_profil"
+			android:onClick="onImportPressed"
+			android:text="@string/import_speaker_profile"
+			android:textColor="#D32F2F"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+	        android:id="@+id/layout_spokenLanguages"
+	        android:orientation="vertical" 
+	        android:layout_margin="@dimen/activity_horizontal_margin" >
+
+			<TextView
+	            android:id="@+id/tv_spokenLanguages"
+	            style="@style/TextviewMetadata1"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/spoken_languages"
+	            android:layout_marginBottom="30dp"/>
+	        		        
+	        <LinearLayout
+	            android:id="@+id/layout_languages"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical" >
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:id="@+id/tv_recordingLanguage"
+						style="@style/TextviewMetadata2"
+						android:layout_width="125dp"
+						android:layout_height="wrap_content"
+						android:text="@string/recordingLanguage"
+						android:textColor="#6FA9C8"
+						android:lines="2" />
+
+					<TextView
+						android:id="@+id/tv_selectedRecordingLanguage"
+						style="@style/TextviewSelectedLanguage"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="12sp"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="right"
+						android:orientation="horizontal">
+
+						<Button
+							android:id="@+id/btn_recordingLanguage"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:onClick="onAddISOLanguageButton"
+							android:text="@string/select_from_list"
+							style="@style/ButtonChooseLanguage"/>
+
+					</LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:id="@+id/tv_motherTongue"
+						android:layout_width="125dp"
+						android:layout_height="wrap_content"
+						android:text="@string/metadata_mother_tongue"
+						style="@style/TextviewMetadata2"/>
+
+					<TextView
+						android:id="@+id/tv_selectedMotherTongue"
+						style="@style/TextviewSelectedLanguage"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="12sp"/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="right"
+						android:orientation="horizontal">
+
+						<Button
+							android:id="@+id/btn_chooseLanguage"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:onClick="onAddISOLanguageButton"
+							android:text="@string/select_from_list"
+							style="@style/ButtonChooseLanguage"/>
+					</LinearLayout>
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/meta_list_other_languages"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="bottom"
+					android:orientation="vertical">
+
+					<LinearLayout
+						android:id="@+id/layout_secondLanguage"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content">
+
+						<TextView
+							android:id="@+id/tv_secondLanguage"
+							style="@style/TextviewMetadata2"
+							android:layout_width="125dp"
+							android:layout_height="wrap_content"
+							android:text="@string/second_language"/>
+
+
+						<TextView
+							android:id="@+id/tv_selectedSecondLanguage"
+							style="@style/TextviewSelectedLanguage"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="12sp"/>
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:gravity="right"
+							android:orientation="horizontal">
+
+							<Button
+								android:id="@+id/btn_secondLanguage"
+								style="@style/ButtonChooseLanguage"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:onClick="onAddISOLanguageButton"
+								android:text="@string/select_from_list"/>
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+
+			</LinearLayout>
+	        	<LinearLayout
+			         android:id="@+id/layout_btnMoreLessLanguage"
+			         android:layout_width="wrap_content"
+			         android:layout_height="wrap_content" 
+			         android:layout_gravity="center"
+			         android:layout_marginTop="20dp"> 
+			         
+			        <Button
+			            android:id="@+id/btn_addMoreLanguages"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_gravity="center_horizontal"
+			            android:onClick="onClickMoreLanguages"
+			            android:text="@string/more_languages"
+			            style="@style/ButtonMoreLanguages"/>
+			        
+			        <Button
+			            android:id="@+id/btn_lessLanguages"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_gravity="center_horizontal"
+			            android:onClick="onClickLessLanguages"
+			            android:text="@string/less_languages"
+			            style="@style/ButtonLessLanguage"/>
+				</LinearLayout>
+		</LinearLayout>
+	    <LinearLayout
+	        android:id="@+id/layout_extraInformation"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_margin="@dimen/activity_horizontal_margin" >
+	
+	        <TextView
+	            android:id="@+id/edit_recording_lang"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingTop="10dp"
+	            android:text="@string/extra_information"
+	            style="@style/TextviewMetadata1"
+	            android:layout_marginBottom="20dp" />
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+
+	            <TextView
+	                android:id="@+id/textView4"
+	                style="@style/TextviewMetadata2"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:text="@string/region_origin" />
+
+	            <EditText
+	                android:id="@+id/edit_region_origin"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dp"
+	                android:layout_marginRight="20dp"
+	                android:layout_weight="1"
+	                android:ems="10"
+	                android:hint="@string/mexico"
+	                android:textSize="18sp" />
+	        </LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					android:id="@style/TextviewMetadata1"
+					style="@style/TextviewMetadata2"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/note" />
+
+				<EditText
+					android:id="@+id/meta_edit_note"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:ems="10"
+					android:inputType="textMultiLine"
+					android:layout_weight="3.78"/>
+			</LinearLayout>
+ 
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:id="@+id/layout_personalInformation"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" 
+	        android:layout_margin="@dimen/activity_horizontal_margin" >
+	
+	        <TextView
+	            android:id="@+id/edit_mother_tongue"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingTop="10dp"
+	            android:text="@string/personal_information"
+	            style="@style/TextviewMetadata1" 
+	            android:layout_marginBottom="20dp"/>
+	
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+	
+		        <TextView
+		            android:id="@+id/edit_spkr_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/speaker_name"
+		            style="@style/TextviewMetadata2" 
+		            android:textColor="#6FA9C8"
+		            android:textStyle="bold"/>
+	
+		        <EditText
+		            android:id="@+id/edit_speaker_name"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_marginRight="20dp"
+		            android:layout_weight="1"
+		            android:ems="10"
+		            android:inputType="textPersonName"
+		            android:textSize="18sp"/>
+		        
+		    </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:id="@+id/textView6"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/age"
+	                style="@style/TextviewMetadata2" />
+	
+	            <EditText
+	                android:id="@+id/edit_speaker_age"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="20dp"
+	                android:layout_marginRight="20dp"
+	                android:layout_weight="1"
+	                android:ems="10"
+	                android:textSize="18sp"
+	                android:inputType="number" />
+
+	        </LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="8dp">
+
+				<TextView
+					android:id="@+id/edit_extra_lang"
+					style="@style/TextviewMetadata2"
+					android:layout_width="100sp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:text="@string/gender"/>
+
+				<RadioGroup
+					android:id="@+id/edit_radio_gender"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<RadioButton
+						android:id="@+id/radio_gender_male"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/male"
+						android:textSize="10sp"/>
+
+					<RadioButton
+						android:id="@+id/radio_gender_female"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/female"
+						android:textSize="10sp"/>
+
+					<RadioButton
+						android:id="@+id/radio_gender_unspecified"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:checked="true"
+						android:text="@string/unspecified"
+						android:textSize="10sp"/>
+
+				</RadioGroup>
+
+			</LinearLayout>
+	    </LinearLayout>
+
+		<Button
+			android:id="@+id/button4"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="20dp"
+			android:onClick="onOkButtonPressed"
+			android:text="@string/button_ok"
+			android:textColor="#388E3C"
+			android:textSize="18sp"
+			android:textStyle="bold"/>
+
+	</LinearLayout>
+ </ScrollView>

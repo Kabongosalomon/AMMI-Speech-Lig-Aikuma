@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "org.getalp.ligaikuma"
+        minSdkVersion 16
+        targetSdkVersion 22
+        multiDexEnabled = true
+        versionCode 3
+        versionName "3.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions{
+        disable "ResourceType"
+    }
+    configurations {}
+}
+
+dependencies {
+
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/commons-lang3-3.1.jar')
+    compile files('libs/guava-13.0.1.jar')
+    compile files('libs/json-simple-1.1.1.jar')
+    compile files('libs/musicg-1.4.2.0.jar')
+    compile files('libs/opencsv-2.3.jar')
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(path: ':waveform_view_library')
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support:support-core-utils:27.0.2'
+    compile 'com.itextpdf:itextg:5.5.10'
+    testCompile 'junit:junit:4.12'
+}

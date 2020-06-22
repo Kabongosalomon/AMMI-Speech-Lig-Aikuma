@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lig-aikuma.iml" filepath="$PROJECT_DIR$/lig-aikuma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lig-aikuma-master.iml" filepath="$PROJECT_DIR$/.idea/modules/lig-aikuma-master.iml" group="lig-aikuma-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/lig-aikuma-master-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/lig-aikuma-master-app.iml" group="lig-aikuma-master/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/waveform_view_library/lig-aikuma-master-waveform_view_library.iml" filepath="$PROJECT_DIR$/.idea/modules/waveform_view_library/lig-aikuma-master-waveform_view_library.iml" group="lig-aikuma-master/waveform_view_library" />
+      <module fileurl="file://$PROJECT_DIR$/waveform_view_library/waveform_view_library.iml" filepath="$PROJECT_DIR$/waveform_view_library/waveform_view_library.iml" />
+    </modules>
+  </component>
+</project>

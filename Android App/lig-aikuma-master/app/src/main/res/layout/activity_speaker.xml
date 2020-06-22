@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="org.getalp.ligaikuma.lig_aikuma.ui.SpeakerProfile">
+
+
+    <Button
+        android:id="@+id/btn_goBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_undo_black_24dp"
+        android:onClick="onBackPressed"
+        android:text="@string/goBack"
+        android:textColor="#D32F2F"/>
+
+    <ListView
+        android:id="@+id/list_key"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+
