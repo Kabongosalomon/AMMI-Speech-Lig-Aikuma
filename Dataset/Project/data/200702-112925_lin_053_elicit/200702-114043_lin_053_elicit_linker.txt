@@ -1,8 +1,0 @@
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 26) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_25.wav
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 27) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_26.wav
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 28) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_27.wav
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 29) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_28.wav
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 30) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_29.wav
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 31) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_30.wav
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 32) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_31.wav
-/storage/emulated/0/AMMI-Speech-Lig-Aikuma/data/Recorded/doc_book_masese_verse_15.txt (line 33) ; /storage/emulated/0/ligaikuma/recordings/200702-114043_lin_053_elicit/200702-114043_lin_053_elicit_32.wav
